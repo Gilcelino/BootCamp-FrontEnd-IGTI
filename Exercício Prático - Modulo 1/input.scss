@@ -1,0 +1,194 @@
+$yellow-light: rgb(252, 255, 214);
+$red-med: rgb(207, 43, 43);
+$red-dark: rgb(128, 0, 0);
+$grey: #3e3e3e;
+
+body {
+    background-color: $yellow-light;
+    margin: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: $red-med;
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        max-width: 1200px;
+        margin: auto;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        transition: all 1.5s ease;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1100px;
+    justify-content: center;
+    margin: auto;
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+#main-title {
+    display: flex;
+    justify-content: center;
+}
+
+#cake-origin {
+    display: flex;
+    background-color: white;
+    text-align: justify;
+    align-items: center;
+    #cake-origin_photo {
+        width: 250px;
+        height: auto;
+    }
+
+    .cake-origem_item {
+        padding: 0 30px;
+    }
+}
+
+#quote {
+    background-color: $red-dark;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    p {
+        margin: 0;
+    }
+}
+
+#area-recipe-aside {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#cake-recipe {
+    display: flex;
+    flex-flow: column;
+
+    #cake-recipe_photo {
+        width: 350px;
+        height: auto;
+        float: left;
+        padding: 0 20px 0 0;
+    }
+    #cake-recipe_content {
+        display: flex;
+        flex-flow: row nowrap;
+        ul {
+            margin: 0;
+        }
+    }
+}
+
+#related-cake {
+    background-color: white;
+}
+
+#contact {
+    display: flex;
+    flex-flow: column;
+    h2 {
+        display: flex;
+        justify-content: center;
+    }
+    #contact_button {
+        display: inline;
+        margin: 10px 0;
+    }
+}
+
+#footer {
+    background-color: $grey;
+    color: lightgrey;
+    padding: 10px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    #footer_social-medias {
+        .footer_social-medias_icons {
+            max-height: 40px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        #area-recipe-aside {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        max-width: calc(100% - 40px);
+        #cake-origin {
+            flex-flow: column;
+            #cake-origin_photo {
+                width: 100%;
+            }
+        }
+
+        #area-recipe-aside {
+            flex-flow: row wrap;
+        }
+
+        #cake-recipe {
+            #cake-recipe_photo {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        #related-cake {
+            flex: 1 1 auto;
+        }
+        #contact {
+            .contact_input {
+                width: calc(100% - 7px);
+                margin-bottom: 10px;
+            }
+            #contact_button {
+                width: 100%;
+                margin: 0;
+                #btnSubmit {
+                    width: 100%;
+                    background-color: #adff2f;
+                    margin-bottom: 10px;
+                }
+                #btnNaoEnviar {
+                    width: 100%;
+                    background-color: #ffa500;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    #footer {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
