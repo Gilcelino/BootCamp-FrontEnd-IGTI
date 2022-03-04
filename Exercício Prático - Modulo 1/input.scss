@@ -3,6 +3,18 @@ $red-med: rgb(207, 43, 43);
 $red-dark: rgb(128, 0, 0);
 $grey: #3e3e3e;
 
+html{
+    scroll-behavior: smooth;
+}
+
+scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+  }
+
 body {
     background-color: $yellow-light;
     margin: 0;
