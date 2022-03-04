@@ -1,5 +1,5 @@
 <h1>Página de Receita</h1>
-O exercípio proposto visa a criação de uma página em HTML utilizando CSS para estilização. O exercío exige que seja utilizado Flexbox para formatar a página e que este seja responsível para atender telas com resolução 480px, além de utilização do HTML Semântico.
+O exercípio proposto visa a criação de uma página em HTML utilizando CSS para estilização. O exercío exige que seja utilizado Flexbox para formatar a página e que este seja responsível para atender telas com resolução 480px, além de utilização do HTML Semântico e Block Element Modifier (BEM).
 
 <br>
 

@@ -2,6 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
+scroll-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5em;
+}
+
 body {
   background-color: #fcffd6;
   margin: 0;
@@ -52,11 +60,11 @@ main h2 {
   text-align: justify;
   align-items: center;
 }
-#cake-origin #cake-origin_photo {
+#cake-origin #cake-origin__photo {
   width: 250px;
   height: auto;
 }
-#cake-origin .cake-origem_item {
+#cake-origin .cake-origin__item {
   padding: 0 30px;
 }
 
@@ -65,9 +73,6 @@ main h2 {
   color: white;
   text-align: center;
   margin: 10px 0;
-}
-#quote p {
-  margin: 0;
 }
 
 #area-recipe-aside {
@@ -79,17 +84,17 @@ main h2 {
   display: flex;
   flex-flow: column;
 }
-#cake-recipe #cake-recipe_photo {
+#cake-recipe #cake-recipe__photo {
   width: 350px;
   height: auto;
   float: left;
   padding: 0 20px 0 0;
 }
-#cake-recipe #cake-recipe_content {
+#cake-recipe #cake-recipe__content {
   display: flex;
   flex-flow: row nowrap;
 }
-#cake-recipe #cake-recipe_content ul {
+#cake-recipe #cake-recipe__content ul {
   margin: 0;
 }
 
@@ -105,7 +110,7 @@ main h2 {
   display: flex;
   justify-content: center;
 }
-#contact #contact_button {
+#contact #contact__button {
   display: inline;
   margin: 10px 0;
 }
@@ -119,7 +124,7 @@ main h2 {
   justify-content: space-between;
   align-items: center;
 }
-#footer #footer_social-medias .footer_social-medias_icons {
+#footer #footer__social-medias .footer__social-medias__icons {
   max-height: 40px;
   height: auto;
 }
@@ -137,33 +142,33 @@ main h2 {
   main #cake-origin {
     flex-flow: column;
   }
-  main #cake-origin #cake-origin_photo {
+  main #cake-origin #cake-origin__photo {
     width: 100%;
   }
   main #area-recipe-aside {
     flex-flow: row wrap;
   }
-  main #cake-recipe #cake-recipe_photo {
+  main #cake-recipe #cake-recipe__photo {
     width: 100%;
     margin-bottom: 20px;
   }
   main #related-cake {
     flex: 1 1 auto;
   }
-  main #contact .contact_input {
+  main #contact .contact__input {
     width: calc(100% - 7px);
     margin-bottom: 10px;
   }
-  main #contact #contact_button {
+  main #contact #contact__button {
     width: 100%;
     margin: 0;
   }
-  main #contact #contact_button #btnSubmit {
+  main #contact #contact__button #btnSubmit {
     width: 100%;
     background-color: #adff2f;
     margin-bottom: 10px;
   }
-  main #contact #contact_button #btnNaoEnviar {
+  main #contact #contact__button #btnNaoEnviar {
     width: 100%;
     background-color: #ffa500;
     margin-bottom: 10px;
