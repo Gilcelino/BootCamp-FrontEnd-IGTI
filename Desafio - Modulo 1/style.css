@@ -117,20 +117,42 @@ body {
   height: calc(100% - 250px);
 }
 
-#quote {
+#quote-first {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./src/img/trilha.jpg);
+  background-position: center;
+}
+
+#quote-second {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./src/img/treino-praia.jpg);
+  background-position: 100% 67%;
+}
+
+#quote-first,
+#quote-second {
   text-align: center;
   height: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./src/img/trilha.jpg);
   background-size: 100% auto;
-  background-position: center;
   background-repeat: no-repeat;
-  padding: 60px;
+  padding: 100px;
 }
-#quote p {
+#quote-first p,
+#quote-second p {
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1.7em;
   font-weight: 350;
   color: white;
+}
+
+#payment-plan .payment-plan__item {
+  display: flex;
+  justify-content: center;
+}
+#payment-plan .payment-plan__item .payment-plan__item__box {
+  width: 100%;
+}
+#payment-plan .payment-plan__item .payment-plan__item__box .payment-plan__item__button {
+  margin: auto auto 15px;
+  max-width: 92%;
 }
 
 @media (min-width: 62em) {
