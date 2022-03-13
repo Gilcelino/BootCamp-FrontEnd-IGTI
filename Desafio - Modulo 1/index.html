@@ -137,7 +137,9 @@
     </section>
 
     <section id="payment-plan" class="container py-3">
+
       <h2 class="text-center fs-1 fw-light pt-5 pb-3 ">Conheça nossos planos</h2>
+
       <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="payment-plan__item col ">
           <div class="card mb-4 rounded-3 shadow-sm payment-plan__item__box  ">
@@ -216,6 +218,49 @@
       </blockquote>
     </section>
 
+    <section id="contact" class="container">
+      <h2 class="text-center fs-1 fw-light pt-5 pb-3 ">Quer saber mais? Entre em contato</h2>
+
+      <form id="contact-form" class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Informe seu nome" value="" required>
+            <div class="invalid-feedback">
+              Informe seu nome.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <p class="fs-6">Não compartilharemos seu e-mail com ninguém</p>
+            <div class="invalid-feedback">
+              Por favor, entre com um e-mail válido.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+            <div class="invalid-feedback">
+              Por favor, digite uma Mensagem.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <input type="checkbox" class="form-check-input" id="accept-news">
+            <label for="accept-news" class="form-label">Eu aceito a receber notícias por email com promoções</label>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary border-0 color-pink">Enviar</button>
+        </div>
+
+      </form>
+
+    </section>
 
   </main>
 
