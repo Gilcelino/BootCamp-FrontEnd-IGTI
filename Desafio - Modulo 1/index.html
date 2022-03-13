@@ -15,6 +15,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -52,13 +53,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
-          <img src="./src/img/homem-fazendo-flexao.jpg" alt="">
-
+          <img class="d-block " style="filter: brightness(0.5);" src="./src/img/homem-fazendo-flexao.jpg" alt="">
           <div class="container">
             <div class="carousel-caption text-start">
               <h1>Seu corpo em forma</h1>
@@ -68,31 +63,23 @@
           </div>
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
-          <img src="./src/img/mulher-fazendo-ioga.jpg" alt="">
+          <img class="d-block" style="filter: brightness(0.5);" src="./src/img/mulher-fazendo-ioga.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Relaxe sua mente</h1>
               <p>Elimine acumulo de energia </p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+              <p><a class="btn btn-lg btn-primary border-0 color-pink" href="#">Saiba mais</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
-          <img src="./src/img/treino-praia.jpg" alt="">
+          <img class="d-block" style="filter: brightness(0.5);" src="./src/img/treino-praia.jpg" alt="">
 
           <div class="container">
             <div class="carousel-caption text-end">
               <h1>Aumente sua resistência</h1>
               <p>Domine sua energia, seus pensamentos.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+              <p><a class="btn btn-lg btn-primary border-0 color-pink" href="#">Saiba mais</a></p>
             </div>
           </div>
         </div>
@@ -112,31 +99,34 @@
 
     <section id="marketing-cicle" class="container marketing">
       <div class="row">
-        <div class="col-lg-4">
-          <img class="marketing-cicle_img  rounded-circle" src="./src/img/treinamento-funcional.jpg"
+        <div class="marketing-cicle__item  col-lg-4">
+          <img class="marketing-cicle__img  rounded-circle" src="./src/img/treinamento-funcional.jpg"
             alt="Treinamento funcional">
           <h2>Treinamento funcional</h2>
-          <p>O treinamento funcional basea-se no movimento natural do ser humano como correr, pula e empurrar.</p>
-          <p><a class="btn btn-secondary" href="#">Saiba mais &raquo;</a></p>
+          <p class="marketing-cicle__text">O treinamento funcional basea-se no movimento natural do ser humano como
+            correr, pula e empurrar.</p>
+          <p><a class="btn" href="#">Saiba mais &raquo;</a></p>
 
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="marketing-cicle_img  rounded-circle" src="./src/img/treinador.jpg" alt="Treinamento físico">
+        </div>
+        <div class="marketing-cicle__item col-lg-4">
+          <img class="marketing-cicle__img  rounded-circle" src="./src/img/treinador.jpg" alt="Treinamento físico">
 
           <h2>Treino físico</h2>
-          <p>Treinamento de cada grupo muscular trabalhado duas vezes na semana usando aparelhos de academia.
+          <p class="marketing-cicle__text">Treinamento de cada grupo muscular trabalhado duas vezes na semana usando
+            aparelhos de academia.
           </p>
-          <p><a class="btn btn-secondary" href="#">Saiba mais &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="marketing-cicle_img  rounded-circle" src="./src/img/posicao-ioga.jpg" alt="Treinamento físico">
+          <p><a class=" btn" href="#">Saiba mais &raquo;</a></p>
+        </div>
+        <div class="marketing-cicle__item col-lg-4">
+          <img class="marketing-cicle__img  rounded-circle" src="./src/img/posicao-ioga.jpg" alt="Treinamento físico">
 
           <h2>Ioga</h2>
-          <p>É um conceito que se refere às tradicionais disciplinas físicas e mentais originárias da Índia</p>
-          <p><a class="btn btn-secondary" href="#">Saiba mais &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+          <p class="marketing-cicle__text">É um conceito que se refere às tradicionais disciplinas físicas e mentais
+            originárias da Índia.</p>
+          <p><a class="btn " href="#">Saiba mais &raquo;</a></p>
+        </div>
       </div>
-    </section><!-- /.row -->
+    </section>
 
     <section id="quote">
       <blockquote>

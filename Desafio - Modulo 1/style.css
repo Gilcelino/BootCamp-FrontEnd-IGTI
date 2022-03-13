@@ -104,9 +104,17 @@ body {
     font-size: 50px;
   }
 }
-.marketing-cicle_img {
+#marketing-cicle .marketing-cicle__item {
+  display: flex;
+  flex-flow: column;
+}
+#marketing-cicle .marketing-cicle__item .marketing-cicle__img {
+  margin: 0 auto 0 auto;
   width: 140px;
   height: 140px;
+}
+#marketing-cicle .marketing-cicle__item .marketing-cicle__text {
+  height: calc(100% - 250px);
 }
 
 #quote {
