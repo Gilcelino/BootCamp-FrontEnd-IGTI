@@ -179,5 +179,12 @@ body {
     margin-top: 7rem;
   }
 }
+@media (max-width: 768px) {
+  main #quote-first,
+main #quote-second {
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
