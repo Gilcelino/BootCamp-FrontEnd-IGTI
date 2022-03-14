@@ -21,12 +21,16 @@
   color: white;
 }
 
+.color-pink:hover {
+  background-color: #b52249;
+}
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0;
   color: #5a5a5a;
 }
 
@@ -54,6 +58,7 @@ body {
   left: 0;
   min-width: 100%;
   height: 60rem;
+  filter: brightness(0.5);
 }
 
 /* MARKETING CONTENT
@@ -116,6 +121,10 @@ body {
 #marketing-cicle .marketing-cicle__item .marketing-cicle__text {
   height: calc(100% - 250px);
 }
+#marketing-cicle .marketing-cicle__item .marketing-cicle__img:hover {
+  width: 200px;
+  height: 200px;
+}
 
 #quote-first {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./src/img/trilha.jpg);
@@ -153,6 +162,15 @@ body {
 #payment-plan .payment-plan__item .payment-plan__item__box .payment-plan__item__button {
   margin: auto auto 15px;
   max-width: 92%;
+}
+
+#footer-page {
+  background-color: #212429;
+  padding: 20px;
+  margin-top: 40px;
+}
+#footer-page div p {
+  margin: 0;
 }
 
 @media (min-width: 62em) {
