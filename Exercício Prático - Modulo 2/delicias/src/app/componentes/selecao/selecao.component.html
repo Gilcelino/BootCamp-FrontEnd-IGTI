@@ -1,5 +1,7 @@
 <h3 class="titulo">{{titulo}}</h3>
+<i *ngIf="escolhaAte > 1" class="maximo-opcao">{{'Escolha até ' + escolhaAte + ' opções'}}</i>
 
-<div *ngFor="let item of opcoes">
-    <label><input [type]="escolhaAte ==1 ? 'radio' : 'checkbox'" name="opcoes" id="item"> {{item}}</label>
+<div *ngFor="let item of opcoes; let i = index">
+    <label><input #opt [type]="escolhaAte ==1 ? 'radio' : 'checkbox'" name="opcoes" id="item"
+            [disabled]="!objetoHabilitado && !opt.checked" (change)="onChange(i, opt.checked)"> {{item}}</label>
 </div>
