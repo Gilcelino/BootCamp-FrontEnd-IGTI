@@ -1,0 +1,29 @@
+:host {
+  width: 95%;
+}
+
+.selecao-titulo {
+  width: 100%;
+  text-align: center;
+  background-color: brown;
+  color: white;
+}
+.selecao-titulo h3 {
+  margin: 5px 0 0 0;
+  padding: 5px;
+}
+
+.selecao-titulo i {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.selecao-item label {
+  display: block;
+  width: calc(100% - 10px);
+  padding: 5px;
+}
+
+.selecao-item :hover {
+  background-color: rgb(252, 195, 195);
+}

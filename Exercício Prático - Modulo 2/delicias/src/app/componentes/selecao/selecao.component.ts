@@ -26,7 +26,8 @@ export class SelecaoComponent implements OnInit {
       this.opcoesSelecionadas.splice(this.retornaIndexItemSelecionado(item), 1);
     }
 
-    this.objetoHabilitado = this.opcoesSelecionadas.length < this.escolhaAte;
+    this.objetoHabilitado =
+      this.opcoesSelecionadas.length < this.escolhaAte || this.escolhaAte === 1;
   }
 
   retornaIndexItemSelecionado = (item: any) =>

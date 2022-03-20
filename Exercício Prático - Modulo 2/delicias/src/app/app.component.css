@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.titulo {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: #8f3535;
+  color: white;
+}
+
+.titulo h2 {
+  margin: 0;
+}

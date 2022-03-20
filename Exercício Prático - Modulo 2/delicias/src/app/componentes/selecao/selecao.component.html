@@ -1,7 +1,13 @@
-<h3 class="titulo">{{titulo}}</h3>
-<i *ngIf="escolhaAte > 1" class="maximo-opcao">{{'Escolha até ' + escolhaAte + ' opções'}}</i>
-
-<div *ngFor="let item of opcoes; let i = index">
+<div class="selecao-titulo">
+    <h3>{{titulo}}</h3>
+    <span> <i *ngIf="escolhaAte > 1" class="maximo-opcao">{{'Escolha até ' + escolhaAte + ' opções'}}</i>
+        <i *ngIf="escolhaAte > 1 && opcoesSelecionadas.length > 0 ">
+            {{'(' + opcoesSelecionadas.length +
+            (opcoesSelecionadas.length === 1 ? ' opção selecionada' : ' opções selecionadas)')}}
+        </i>
+    </span>
+</div>
+<div *ngFor="let item of opcoes; let i = index" class="selecao-item">
     <label><input #opt [type]="escolhaAte ==1 ? 'radio' : 'checkbox'" name="opcoes" id="item"
             [disabled]="!objetoHabilitado && !opt.checked" (change)="onChange(i, opt.checked)"> {{item}}</label>
 </div>
