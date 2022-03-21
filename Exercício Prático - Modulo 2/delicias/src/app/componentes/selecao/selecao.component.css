@@ -18,6 +18,8 @@
   margin: 0;
 }
 
+.selecao-item {
+}
 .selecao-item label {
   display: block;
   width: calc(100% - 10px);
@@ -25,5 +27,18 @@
 }
 
 .selecao-item :hover {
-  background-color: rgb(234, 195, 252);
+  background-color: rgb(234, 203, 248);
+  animation: changeBackgroundColor 4s infinite;
+}
+
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: rgb(234, 203, 248);
+  }
+  50% {
+    background-color: rgb(220, 178, 240);
+  }
+  100% {
+    background-color: rgb(234, 203, 248);
+  }
 }

@@ -3,7 +3,7 @@
     <span> <i *ngIf="escolhaAte > 1" class="maximo-opcao">{{'Escolha até ' + escolhaAte + ' opções'}}</i>
         <i *ngIf="escolhaAte > 1 && opcoesSelecionadas.length > 0 ">
             {{'(' + opcoesSelecionadas.length +
-            (opcoesSelecionadas.length === 1 ? ' opção selecionada' : ' opções selecionadas)')}}
+            (opcoesSelecionadas.length === 1 ? ' opção selecionada)' : ' opções selecionadas)')}}
         </i>
     </span>
 </div>
