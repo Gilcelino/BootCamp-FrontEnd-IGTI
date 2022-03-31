@@ -1,0 +1,56 @@
+<mat-toolbar class="mat-elevation--z6" color="primary">
+    <mat-toolbar-row>
+        <span class="center">Cardápio</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+
+        <mat-icon class="icon" matBadge="0" matBadgePosition="above" matBadgeColor="accent" aria-hidden="false"
+            aria-label="shopping_cart icon">shopping_cart</mat-icon>
+
+        <span class="spacer"></span>
+        <a class="mat-elevation-z2" mat-button>Ver Pedido</a>
+        <span class="spacer"></span>
+        <span>R$ 0,00</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- <mat-action-list>
+    <ng-container *ngFor="let item of menu">
+        <h2 mat-subheader>
+            {{item.categoria}}
+        </h2>
+        <button mat-list-item>
+            <span>{{item.descricao }}</span>
+            <span class="spacer"></span>
+            <span>{{item.preco | currency:'BRL' }}</span>
+        </button>
+    </ng-container>
+</mat-action-list> -->
+
+<cdk-accordion class="example-accordion">
+    <cdk-accordion-item *ngFor="let categoria of getCategory(); let index = index;" #accordionItem="cdkAccordionItem"
+        class="example-accordion-item" role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
+        [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+        <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+            {{ categoria }}
+            <span class="example-accordion-item-description">
+                Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+            </span>
+        </div>
+        <div class="example-accordion-item-body" role="region" [style.display]="accordionItem.expanded ? '' : 'none'"
+            [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
+
+            <mat-action-list>
+                <ng-container *ngFor="let item of menu">
+                    <div *ngIf="item.categoria == categoria ">
+                        <button mat-list-item>
+                            <span>{{item.descricao }}</span>
+                            <span class=" spacer"></span>
+                            <span>{{item.preco | currency:'BRL' }}</span>
+                        </button>
+                    </div>
+                </ng-container>
+            </mat-action-list>
+        </div>
+    </cdk-accordion-item>
+</cdk-accordion>
