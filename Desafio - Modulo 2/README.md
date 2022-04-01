@@ -38,5 +38,6 @@ Existe um carrinho de compra onde o usuário poderá adicionando os itens que de
 ![Material](https://img.shields.io/badge/Material-0081CB?style=flat&logo=material-ui&logoColor=white)
 ![scss](https://img.shields.io/badge/-SCSS-333333?style=flat&logo=SASS&logoColor=990099)
 ![JSONServer](https://img.shields.io/badge/-JSON--Server-333333?style=flat&logo=npm&logoColor=red)
-
+![TypeScript](https://img.shields.io/badge/-TypeScript-333333?style=flat&logo=TypeScript&logoColor=1572B6)
+![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=JavaScript&logoColor=EECB01)
 
