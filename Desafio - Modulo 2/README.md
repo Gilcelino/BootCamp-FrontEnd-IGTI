@@ -1,27 +1,42 @@
-# Pedido
+# Pedido --ngFood
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+O desafio proposto visa a criação de uma aplicação utilizando o Angular como framework, neste caso foi utilizado o [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
 
-## Development server
+O app utiliza Material do Angular para compor os componentes da tela, além de comunicar com Backend para capturar os produtos.
+Existe um carrinho de compra onde o usuário poderá adicionando os itens que desejar.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<br>
 
-## Code scaffolding
+<h3>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Objetivos**
 
-## Build
+</h3>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p>
+    <ul>
+        <li style="list-style:none;">✔ Criar componentes, templates e pipes.</li>
+        <li style="list-style:none;">✔ Comunicar com o back end.</li>
+        <li style="list-style:none;">✔ Definir roteamento.</li>
+        <li style="list-style:none;">✔ Usar serviços.</li>
+        <li style="list-style:none;">✔ Usar a biblioteca Angular Material.</li>
+    </ul>
+</p>
 
-## Running unit tests
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h3>
 
-## Running end-to-end tests
+**Tecnologias utilizadas**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+</h3>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
+![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
+![Angular](https://img.shields.io/badge/-Angular-333333?style=flat&logo=Angular&logoColor=DD0031)
+![Material](https://img.shields.io/badge/Material-0081CB?style=flat&logo=material-ui&logoColor=white)
+![scss](https://img.shields.io/badge/-SCSS-333333?style=flat&logo=SASS&logoColor=990099)
+![JSONServer](https://img.shields.io/badge/-JSON--Server-333333?style=flat&logo=npm&logoColor=red)
+
+
