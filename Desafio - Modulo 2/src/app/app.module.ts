@@ -15,13 +15,15 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
 import localePt from '@angular/common/locales/pt';
 
 import { MenuComponent } from './components/menu/menu.component';
+import { OrderComponent } from './components/order/order.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

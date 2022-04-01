@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IMenu } from 'src/app/interfaces/imenu';
+import { IProduct } from 'src/app/interfaces/iproduct';
 import { OrderService } from 'src/app/services/order.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class MenuComponent implements OnInit {
 
-  menu: IMenu[] = []
+  menu: IProduct[] = []
 
   constructor(private orderService: OrderService) { }
 
@@ -21,20 +21,37 @@ export class MenuComponent implements OnInit {
   }
 
   getCategory(): String[] {
-    let categoria: String[] = [];
+    let category: String[] = [];
 
-    this.menu.map(item => item.categoria).reduce((x, y) => {
-      if (categoria.find(cat => cat == x)) {
+    if (this.menu.length == 0) {
+      return [];
+    }
+
+    this.menu.map(product => product.categoria).reduce((x, y) => {
+      if (category.find(cat => cat == x)) {
         return y;
       }
-      categoria.push(x)
+      category.push(x);
       return y;
     });
-    return categoria;
+    return category;
   }
 
-  getItemCategoria(categoria: any): IMenu[] {
+  getItemCategoria(category: any): IProduct[] {
 
-    return this.menu.filter(item => item.categoria === categoria);
+    return this.menu.filter(product => product.categoria === category);
+  }
+
+  addItemCart(product: IProduct) {
+    this.orderService.addItemCart(product);
+  }
+
+  getTotalUnits(): number {
+    return this.orderService.getTotalUnits();
+  }
+
+  getTotalValue(): number {
+    return this.orderService.getTotalValue();
   }
 }
+

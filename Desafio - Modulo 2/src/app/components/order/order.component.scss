@@ -1,0 +1,49 @@
+:host{
+  display: flex;
+  flex-flow: column nowrap;
+  
+}
+.toolbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  mat-toolbar-row {
+    height: 45px;
+  }
+  
+  .center {
+    justify-content: center;
+    font-size: 1.4em;
+  }
+
+  .listitem{    
+    margin-bottom: 50px;
+
+    .acao{
+      padding: 5px;
+    }
+    .acao:hover{
+      cursor: pointer;
+    }
+
+    .cart-clean{
+      color: rgb(155, 155, 155);
+      width: 100%;
+      text-align: center;
+      h2 {
+        margin: 0;
+      }
+    }
+
+  }
+
+  .toolbarfooter{
+    height: 50px ;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  

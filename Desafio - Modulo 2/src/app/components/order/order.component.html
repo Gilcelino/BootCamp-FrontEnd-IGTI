@@ -1,1 +1,35 @@
-<p>order works!</p>
+<mat-toolbar class="toolbar mat-elevation--z6" color="primary">
+    <mat-toolbar-row class="center">
+        <span>Pedido</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<mat-list class="listitem" role="list">
+    <ng-container *ngFor="let item of getOrderProduct(); let i = index;">
+        <mat-list-item>
+            <span>{{item.product.descricao }}</span>
+            <span class=" spacer"></span>
+            <span>{{item.units }} &times; {{item.product.preco | currency:'BRL' }}</span>
+            <span class="acao">
+                <a mat-button (click)="delete(i)">
+                    <mat-icon>delete</mat-icon>
+                </a>
+            </span>
+        </mat-list-item>
+    </ng-container>
+    <mat-list-item *ngIf="this.orderProduct.length ===0">
+        <div class="cart-clean">
+            <h2>Carrinho vazio</h2>
+        </div>
+    </mat-list-item>
+</mat-list>
+
+<mat-toolbar class="toolbarfooter mat-elevation--z6" color="primary">
+    <a class="mat-elevation-z1" mat-button routerLink="/menu">Ver mais Produtos</a>
+    <span class=" spacer"></span>
+    <a class="mat-elevation-z1" mat-button (click)="clear()">Limpar Carrinho</a>
+    <span class=" spacer"></span>
+    <button mat-raised-button color="accent">Finalizar</button>
+</mat-toolbar>
