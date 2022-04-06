@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hello">
+        <fieldset>
+            <legend>Template</legend>
+            <div v-html="htmlConent"></div>
+            <p>Primeiro Nome: {{firstName}}</p>
+            <p>Sobrenome: {{lastName}}</p>
+            <p>Idate: {{age}}</p>
+            <p>{{age>=18 ? 'Maior de idade' : 'Menor de idade'}}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>methods</legend>
+            <button v-on:click="incrementAge">Incrementar idade</button>
+            <button @click="decrementAge">Incrementar idade</button>
+        </fieldset>
+        <fieldset>
+            <legend>computed</legend>
+            <p>Nome completo: {{firstName}} {{lastName}}</p>
+            <p>Nome completo:{{fullName}}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>whachers</legend>
+            <label>Address: <input id="input-address" type="text" v-model="address"></label> <span>{{address}}</span>
+        </fieldset>
+
+        <fieldset>
+            <!-- Remove o elemento do DOM, usado quando o elemente não é exibido com frequência -->
+            <legend>diretiva v-if</legend>
+            <label>Nota: <input id="input-grade" type="text" v-model="grade"></label>
+            <p v-if="grade < 60">Reprovado</p>
+            <p v-else-if="grade >= 98 && grade <= 100">Aprovado com excelência</p>
+            <p v-else-if="grade >= 60 && grade < 98">Aprovado</p>
+            <p v-else>Nota inválida</p>
+
+        </fieldset>
+
+        <fieldset>
+            <!-- Não remove o elemento do DOM, usado quando o elemento é frequentemente exibido no DOM -->
+            <legend>diretiva v-show</legend>
+            <button v-show="!isUserLogged" v-on:click="isUserLogged = true">Login</button>
+            <button v-show="isUserLogged" v-on:click="isUserLogged = false">Logout</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>diretiva v-text</legend>
+            <p v-text="'nome ' + firstName + ' ' + lastName"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>diretiva v-html</legend>
+            <div v-html="htmlConent"></div>
+        </fieldset>
+
+        <fieldset>
+            <!-- Somente é executado na tela uma vez -->
+            <legend>diretiva v-once</legend>
+            <label>Tipo: <input id="input-type" type="text" v-model="type"></label>
+            <p v-once>Com v-once: {{type}} </p>
+            <p>Sem v-once: {{type}}</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>diretiva v-for</legend>
+            <h4>Marcas Carros</h4>
+            <ul>
+                <li v-for="carBrand in carBrands">{{carBrand}}
+                    <div v-for="car in cars">
+                        <ul v-if="car.brand === carBrand">
+                            <li>{{car.name}} </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <h4>For em cima de um objeto</h4>
+            <ul>
+                <li v-for="(value, key, index) in car">{{index}} - {{key}} - {{value}}</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Diretiva v-bind</legend>
+            <a href="url" title="Não funciona ao clickar">Google (não funciona)</a> <br>
+            <a v-bind:href="url" v-bind:title="urlDescription">Google (Normal)</a> <br>
+            <a :href="url" :[argument]="urlDescription">Google (Abreviado)</a>
+        </fieldset>
+
+        <fieldset>
+            <legend>Diretiva v-model</legend>
+            <select v-model="selectedCar">
+                <option v-for="car in cars" v-bind:value="car">{{car.name}}</option>
+            </select>
+            <br>
+            <br>
+            <label v-if="selectedCar">{{selectedCar.name}} - {{selectedCar.brand}}</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Diretiva v-pre</legend>
+            <!-- Não compila o conteudo que estiver marcada. -->
+            <p>{{firstName}}</p>
+            <p v-pre>{{firstName}}</p>
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Diretiva v-cloak</legend>
+            <!-- é usado para marcar um elemento que não foi carregado ainda
+                neste caso pode ser usado um CSS passando o display para none, veja na parte do style. -->
+            <p>{{firstName}}</p>
+            <p v-cloak>{{firstName}}</p>
+        </fieldset>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.2.31"></script>
+    <script>
+        const app = {
+            data() {
+                return {
+                    htmlConent: "<p style='color:red; font-size: 20px'>Hello Word Vue.js!</p>",
+                    htmlConent2: "'color:red; font-size: 20px'",
+                    firstName: "João",
+                    lastName: "Carlos",
+                    age: 40,
+                    address: 'rua x',
+                    grade: 0,
+                    isUserLogged: false,
+                    type: 'Aluno',
+                    carBrands: ['VW', 'GM', 'Ford'],
+                    cars: [{ name: 'Golf', brand: 'VW' }, { name: 'Fusca', brand: 'VW' }, { name: 'Ranger', brand: 'Ford' }, { name: 'Vectra', brand: 'GM' }, { name: 'Fusion', brand: 'Ford' },],
+                    car: { name: 'Golf', brand: 'VW', year: 2015, km: 140000 },
+                    url: 'https://www.google.com',
+                    urlDescription: 'Click para ir ao site do google',
+                    argument: 'title',
+                    selectedCar: '',
+                }
+            },
+            methods: {
+                incrementAge: function () {
+                    this.age++;
+                },
+                decrementAge() {
+                    this.age--;
+                }
+            },
+            computed: {
+                //Não fica chamando sempre igual fosse no methodo
+                fullName: function () {
+                    return `${this.firstName} ${this.lastName}, idade: ${this.age}`
+                }
+            },
+
+            watch: {
+                address: function (newValue, oldValue) {
+                    console.log(newValue);
+                    console.log(oldValue);
+                }
+            }
+        }
+        Vue.createApp(app).mount("#hello");
+    </script>
+</body>
+
+</html>
