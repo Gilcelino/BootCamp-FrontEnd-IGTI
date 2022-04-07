@@ -22,7 +22,7 @@
         currency="USD"
         locale="pt-br"
       />
-      <label class="label-inputnumber" for="dollar">Quantidade em Dollar</label>
+      <label class="label-inputnumber" for="dollar">Cotação Dollar</label>
     </span>
   </div>
   <div>
