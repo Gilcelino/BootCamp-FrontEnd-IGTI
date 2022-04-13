@@ -1,24 +1,38 @@
-# list-album
+# lista de Book
 
-## Project setup
-```
-npm install
-```
+O desafio proposto visa a criação de uma aplicação utilizando VueJS.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+O app utiliza o sistema de rota do vue-router, Composition API e Axios para consumir uma API Online.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<br>
 
-### Lints and fixes files
-```
-npm run lint
-```
+<h3>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**Objetivos**
+
+</h3>
+
+<p>
+    <ul>
+        <li style="list-style:none;">✔ Criar componentes</li>
+        <li style="list-style:none;">✔ Leitura do back end.</li>
+        <li style="list-style:none;">✔ Definir roteamento.</li>
+        <li style="list-style:none;">✔ Usar serviços.</li>        
+    </ul>
+</p>
+
+<br>
+
+<h3>
+
+**Tecnologias utilizadas**
+
+</h3>
+
+
+![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
+![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
+![VueJS](https://img.shields.io/badge/-VueJS-333333?style=flat&logo=VueJS)
+![Axios](https://img.shields.io/badge/-Axios-333333?style=flat&logo=Axios)
+![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=JavaScript&logoColor=EECB01)
+
