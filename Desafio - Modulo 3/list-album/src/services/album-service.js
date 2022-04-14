@@ -1,7 +1,7 @@
 import axios from "axios"
 
-const getAlbumList = async () => {
-    const resp = await axios.get("https://jsonplaceholder.typicode.com/users/1/albums");
+const getAlbumList = async (id) => {
+    const resp = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}/albums`);
     return resp.data;
 }
 

@@ -32,7 +32,7 @@ export default {
       });
     });
 
-    const backPage = () => router.replace("/");
+    const backPage = () => router.back();
 
     return { album, backPage };
   },

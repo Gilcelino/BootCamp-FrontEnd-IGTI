@@ -1,5 +1,5 @@
 <template>
-  <h1>Lista</h1>
+  <h1 class="title">Lista</h1>
   <table class="album-list-table">
     <thead>
       <tr>
@@ -17,34 +17,44 @@
     </tr>
     <tbody></tbody>
   </table>
+  <footer class="footer">
+    <button class="btn-back" v-on:click="backPage">Voltar</button>
+  </footer>
 </template>
 
 <script>
 import { getAlbumList } from "../services/album-service.js";
 import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 export default {
   name: "UserAlbumList",
   setup() {
     const list = ref([]);
     const router = useRouter();
+    const route = useRoute();
+
     onMounted(() => {
-      getAlbumList().then((resp) => {
+      getAlbumList(route.params.id).then((resp) => {
         list.value = resp;
       });
     });
 
+    const backPage = () => router.replace("/");
+
     const selectAlbumDetail = (id) =>
       router.push({ name: "album", params: { id } });
 
-    return { list, selectAlbumDetail };
+    return { list, selectAlbumDetail, backPage };
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.title {
+  text-align: center;
+}
 .album-list-table {
   border-collapse: collapse;
   width: 100%;
@@ -71,5 +81,25 @@ tr:nth-child(even) {
 
 .album-list-table tr:hover {
   background-color: #ddd;
+}
+
+.footer {
+  bottom: 0;
+  position: sticky;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 3px #979191;
+}
+.btn-back {
+  width: 200px;
+  padding: 10px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid #969696;
 }
 </style>
