@@ -1,0 +1,47 @@
+<div>
+    <h2>Origem</h2>
+    <div>
+        <input #optAdulto type="radio" name="A/C" (change)="crianca=!optAdulto.checked"> Adulto
+        <input type="radio" name="A/C" (change)="crianca=!optAdulto.checked">Criança
+
+        <input #optPais type="radio" name="pais" (change)="foraPais=!optPais.checked">Dentro País
+        <input type="radio" name="pais" (change)="foraPais=!optPais.checked">Fora País
+
+        <input #optClasse type="radio" name="classe" (change)="classeExecutiva=!optClasse.checked">Econômica
+        <input type="radio" name="classe" (change)="classeExecutiva=!optClasse.checked">Executiva
+    </div>
+
+    <div>
+        <label>Latitude Origem<input type="number" [(ngModel)]="latitudeOrigem"></label>
+    </div>
+    <div>
+        <label>Logitude Destino<input type="number" [(ngModel)]="longitudeOrigem"></label>
+    </div>
+    <h2>Destino</h2>
+    <div>
+        <label>Latitude Origem<input type="number" [(ngModel)]="latitudeDestino"></label>
+    </div>
+    <div>
+        <label>Logitude Destino<input type="number" [(ngModel)]="longitudeDestino"></label>
+    </div>
+
+    <div>
+        <label>Milhas<input type="number" [(ngModel)]="qtdeMilhas"></label>
+    </div>
+</div>
+
+<div>
+    <button (click)="executar()">executar</button>
+    <div>
+        <h2>Informações calculadas</h2>
+        <div>
+            KM: {{kmDistancia}}
+        </div>
+        <div>
+            Valor Milha: {{valorMilha}}
+        </div>
+        <div>
+            Valor Final: {{Valor}}
+        </div>
+    </div>
+</div>
